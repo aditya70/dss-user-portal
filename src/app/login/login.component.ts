@@ -11,8 +11,9 @@ import {FormBuilder,FormGroup,FormControl,Validators,NgForm} from '@angular/form
 export class LoginComponent implements OnInit {
 
   userType = ["FLA","Call center","distributor","country head"];
-
+  submitted = false;
   loginForm: any = FormGroup;
+  credentials = true;
 
   constructor(private formBuilder: FormBuilder,private router : Router) { }
 
@@ -25,14 +26,21 @@ export class LoginComponent implements OnInit {
   }
   
   onSubmit(myForm : NgForm){
-    console.log(myForm);
-    console.log(myForm.value.userType);
-    console.log(myForm.value.phone);
-    console.log(myForm.value.password);
-    if (myForm.value.phone === 12345 && myForm.value.password === 12345)
+    this.submitted = true;
+     console.log(myForm);
+    // console.log(myForm.value.userType);
+    // console.log(myForm.value.phone);
+    // console.log(myForm.value.password);
+   //  console.log(this.loginForm.value);
+    if (myForm.value.phone == 12345 && myForm.value.password == 12345)
     {
-     console.log("successfully logged");
+     console.log("successfully logged in");
      this.router.navigate(['/home']);
+    }
+    
+    else{
+      this.credentials = false;
+     // alert("invalid phone or password");
     }
 
   }

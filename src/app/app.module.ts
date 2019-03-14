@@ -7,18 +7,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { OneComponent } from './dashboard/one/one.component';
-import { TwoComponent } from './dashboard/two/two.component';
-import { ThreeComponent } from './three/three.component';
+
+import { SideMenuComponent } from './side-menu/side-menu.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    OneComponent,
-    TwoComponent,
-    ThreeComponent
+    SideMenuComponent,
+    DashboardComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

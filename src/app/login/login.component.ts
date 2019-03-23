@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Routes,Router } from '@angular/router';
 import {FormBuilder,FormGroup,FormControl,Validators,NgForm} from '@angular/forms';
+import { LoginService } from '../services/login.service';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
   loginForm: any = FormGroup;
   credentials = true;
 
-  constructor(private formBuilder: FormBuilder,private router : Router) { }
+  constructor(private formBuilder: FormBuilder,private router : Router , private loginService : LoginService) { }
 
   ngOnInit() {
     this.loginForm = new FormGroup({
@@ -32,10 +33,11 @@ export class LoginComponent implements OnInit {
     // console.log(myForm.value.phone);
     // console.log(myForm.value.password);
    //  console.log(this.loginForm.value);
-    if (myForm.value.phone == 12345 && myForm.value.password == 12345)
+    if (myForm.value.phone == 1 && myForm.value.password == 1)
     {
      console.log("successfully logged in");
-     this.router.navigate(['/home']);
+     this.loginService.setToken("token112");
+     this.router.navigate(['/dashboard']);
     }
     
     else{
@@ -44,4 +46,6 @@ export class LoginComponent implements OnInit {
     }
 
   }
+
+  
 }

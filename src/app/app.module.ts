@@ -1,3 +1,4 @@
+import { TransfereService } from './services/transfere.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -21,6 +22,7 @@ import { UserComponent } from './pages/user/user.component';
 import { UserService } from './services/user.service';
 import { BooksComponent } from './pages/books/books.component';
 import { BookDetailsComponent } from './pages/book-details/book-details.component';
+import { EditBookDetailsComponent } from './pages/edit-book-details/edit-book-details.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { BookDetailsComponent } from './pages/book-details/book-details.componen
     RegisterComponent,
     UserComponent,
     BooksComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    EditBookDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,7 @@ import { BookDetailsComponent } from './pages/book-details/book-details.componen
     CommonModule,
     HttpClientModule
   ],
-  providers: [LoginService ,AuthGuard,UserService],
+  providers: [LoginService ,AuthGuard,UserService,TransfereService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

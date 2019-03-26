@@ -1,3 +1,4 @@
+import { TransfereService } from './../../services/transfere.service';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import {Router} from '@angular/router';
@@ -11,7 +12,7 @@ export class BooksComponent implements OnInit {
 
   bookData ;
   
-  constructor(private apiService : ApiService) { }
+  constructor(private apiService : ApiService , private transfereService : TransfereService ) { }
 
   ngOnInit() {
     this.apiService.getAllBooks().subscribe( res => {
@@ -31,11 +32,11 @@ export class BooksComponent implements OnInit {
   };
 
   bookDetails(id){
-    console.log("delete book method called ");
-    this.apiService.getBookDetails(id)
-      .subscribe( data => {
-       console.log(data);
-      })
+    // this.apiService.getBookDetails(id)
+    //   .subscribe( data => {
+    //    // console.log(data);
+    //    this.transfereService.setData(data);
+    //    })
   };
 
 }

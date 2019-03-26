@@ -1,0 +1,21 @@
+<table class="table table-bordered">
+    <thead class="">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <!-- <th scope="col">Description</th> -->
+        <th scope="col">PageCount</th>
+        <th scope="col">PublishDate</th>
+
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let book of bookData">
+            <th >{{book.ID}}</th>
+            <td>{{book.Title}}</td>
+            <td>{{book.PageCount}}</td>
+            <td>{{book.PublishDate}}</td>
+        </tr>
+        </tbody>
+       
+      </table>

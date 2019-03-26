@@ -1,0 +1,19 @@
+<table class="table table-bordered">
+    <thead class="">
+      <tr>
+        <th scope="col">name</th>
+        <th scope="col">email</th>
+        <th scope="col">phone</th>
+        <th scope="col">website</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of userData">
+            <th >{{user.name}}</th>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.website}}</td>
+        </tr>
+        </tbody>
+       
+      </table>

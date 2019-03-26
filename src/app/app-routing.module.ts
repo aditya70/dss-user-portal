@@ -8,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import {FormBuilder,FormGroup,FormControl,Validators,NgForm} from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './guards/auth.guard';
+import { UserComponent } from './pages/user/user.component';
+import { BooksComponent } from './pages/books/books.component';
 
 const routes: Routes = [
   
@@ -16,7 +18,9 @@ const routes: Routes = [
 
       { path: '', redirectTo: 'about', pathMatch: 'full' },
       { path: 'about', component: AboutComponent },
-      { path: 'contact', component: ContactComponent }
+      { path: 'contact', component: ContactComponent },
+      { path: 'user', component: UserComponent },
+      { path: 'book', component: BooksComponent }
   ]
   },
   { path: '**', redirectTo: '' }

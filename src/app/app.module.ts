@@ -20,6 +20,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { UserComponent } from './pages/user/user.component';
 import { UserService } from './services/user.service';
 import { BooksComponent } from './pages/books/books.component';
+import { BookDetailsComponent } from './pages/book-details/book-details.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BooksComponent } from './pages/books/books.component';
     HeaderComponent,
     RegisterComponent,
     UserComponent,
-    BooksComponent
+    BooksComponent,
+    BookDetailsComponent
   ],
   imports: [
     BrowserModule,

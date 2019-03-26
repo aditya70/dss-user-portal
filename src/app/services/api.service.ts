@@ -12,7 +12,7 @@ const httpOptions = {
 })
 export class ApiService {
 
-  apiUrl = 'http://fakerestapi.azurewebsites.net/api/Books';
+  apiUrl = 'http://fakerestapi.azurewebsites.net/api/Books/';
 
   constructor(private http: HttpClient) { }
 
@@ -20,4 +20,19 @@ export class ApiService {
 {
   return this.http.get(this.apiUrl);
 }
+
+updateBook(book) {
+  return this.http.put(this.apiUrl, book);
+}
+
+deleteBook(id: number){
+  console.log("delete book service called  " +this.apiUrl + id);
+  return this.http.delete(this.apiUrl + id);
+}
+
+getBookDetails(id : number){
+  console.log("get book details service called " +this.apiUrl + id);
+  return this.http.get(this.apiUrl + id);
+}
+
 }

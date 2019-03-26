@@ -1,3 +1,4 @@
+import { BookDetailsComponent } from './pages/book-details/book-details.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
@@ -20,7 +21,8 @@ const routes: Routes = [
       { path: 'about', component: AboutComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'user', component: UserComponent },
-      { path: 'book', component: BooksComponent }
+      { path: 'book', component: BooksComponent },
+      { path: 'book/:id', component: BookDetailsComponent }
   ]
   },
   { path: '**', redirectTo: '' }

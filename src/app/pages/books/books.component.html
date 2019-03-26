@@ -15,6 +15,10 @@
             <td>{{book.Title}}</td>
             <td>{{book.PageCount}}</td>
             <td>{{book.PublishDate}}</td>
+            <td><button class="btn btn-success"  routerLink="/book/{{book.ID}}" (click)="bookDetails(book.ID)">Details</button>
+           <td><button class="btn btn-success" (click)="editBook(book)">Edit</button>
+           <td><button class="btn btn-success" (click)="deleteBook(book.ID)">Delete</button>
+         
         </tr>
         </tbody>
        

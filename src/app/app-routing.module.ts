@@ -11,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './guards/auth.guard';
 import { UserComponent } from './pages/user/user.component';
 import { BooksComponent } from './pages/books/books.component';
+import { CreateBookComponent } from './pages/create-book/create-book.component';
 
 const routes: Routes = [
   
@@ -22,7 +23,8 @@ const routes: Routes = [
       { path: 'contact', component: ContactComponent },
       { path: 'user', component: UserComponent },
       { path: 'book', component: BooksComponent },
-      { path: 'book/:id', component: BookDetailsComponent }
+      { path: 'book/:id', component: BookDetailsComponent },
+      { path: 'add-book', component: CreateBookComponent }
   ]
   },
   { path: '**', redirectTo: '' }

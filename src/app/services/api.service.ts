@@ -35,4 +35,11 @@ getBookDetails(id : number){
   return this.http.get(this.apiUrl + id);
 }
 
+createBook(book)
+{
+  return this.http.post(this.apiUrl, book);
+}
+
+
+
 }

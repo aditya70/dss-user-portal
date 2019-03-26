@@ -1,0 +1,48 @@
+<div class="row">
+
+  <div class="col-md-10 col-md-offset-2">
+    <h1>Add Book </h1>
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+      <div class="form-group row">
+       
+        <label for="Title" class="col-sm-2">Title:</label>
+         <input type="text" class="form-control col-sm-10" formControlName="Title" id="Title">
+        <div *ngIf="submitted && bookForm.controls.Title.errors" class="error">
+          <div *ngIf="bookForm.controls.Title.errors.required">Email is required</div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Description" class="col-sm-2" >Description:</label>
+        <input type="text" class="form-control col-sm-10" formControlName="Description" id="pwd">
+        <div *ngIf="submitted && bookForm.controls.Description.errors" class="error">
+          <div *ngIf="bookForm.controls.Description.errors.required">Description is required</div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="PageCount" class="col-sm-2" >PageCount:</label>
+        <input type="text" class="form-control col-sm-10" formControlName="PageCount" id="email">
+        <div *ngIf="submitted && bookForm.controls.PageCount.errors" class="error">
+          <div *ngIf="bookForm.controls.PageCount.errors.required">PageCount is required</div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Excerpt" class="col-sm-2">Excerpt:</label>
+        <input type="text" class="form-control col-sm-10" formControlName="Excerpt" id="email">
+        <div *ngIf="submitted && bookForm.controls.Excerpt.errors" class="error">
+          <div *ngIf="bookForm.controls.Excerpt.errors.required">Excerpt is required</div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="PublishDate"class="col-sm-2" >PublishDate:</label>
+        <input type="text" class="form-control col-sm-10" formControlName="PublishDate" id="email">
+        <div *ngIf="submitted && bookForm.controls.PublishDate.errors" class="error">
+          <div *ngIf="bookForm.controls.PublishDate.errors.required">PublishDate is required</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" >Login</button>
+      <!-- <div *ngIf = "bookForm.valid">
+        
+      </div> -->
+    </form>
+  </div>
+</div>

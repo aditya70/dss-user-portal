@@ -23,6 +23,7 @@ import { UserService } from './services/user.service';
 import { BooksComponent } from './pages/books/books.component';
 import { BookDetailsComponent } from './pages/book-details/book-details.component';
 import { EditBookDetailsComponent } from './pages/edit-book-details/edit-book-details.component';
+import { CreateBookComponent } from './pages/create-book/create-book.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { EditBookDetailsComponent } from './pages/edit-book-details/edit-book-de
     UserComponent,
     BooksComponent,
     BookDetailsComponent,
-    EditBookDetailsComponent
+    EditBookDetailsComponent,
+    CreateBookComponent
   ],
   imports: [
     BrowserModule,

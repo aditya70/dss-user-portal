@@ -10,13 +10,17 @@ import {Router} from '@angular/router';
 })
 export class BooksComponent implements OnInit {
 
-  bookData ;
+  bookData  ;
   
-  constructor(private apiService : ApiService , private transfereService : TransfereService ) { }
+  constructor(private apiService : ApiService ,
+     private transfereService : TransfereService,
+     private router : Router) { }
 
   ngOnInit() {
     this.apiService.getAllBooks().subscribe( res => {
       console.log(res);
+      // this.bookData.push(res);
+      // this.bookData = this.bookData.slice(0,10);
       this.bookData = res;
     });
     
@@ -38,5 +42,10 @@ export class BooksComponent implements OnInit {
     //    this.transfereService.setData(data);
     //    })
   };
+
+  addBook(){
+    console.log("add book function called");
+    this.router.navigate(['/add-book'])
+  }
 
 }

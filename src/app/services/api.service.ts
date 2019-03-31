@@ -13,6 +13,7 @@ const httpOptions = {
 export class ApiService {
 
   apiUrl = 'http://fakerestapi.azurewebsites.net/api/Books/';
+  baseUrl = 'http://fakerestapi.azurewebsites.net/api/';
 
   constructor(private http: HttpClient) { }
 
@@ -40,6 +41,9 @@ createBook(book)
   return this.http.post(this.apiUrl, book);
 }
 
-
+getAllAuthors()
+{
+  return this.http.get(this.baseUrl + 'Authors');
+}
 
 }

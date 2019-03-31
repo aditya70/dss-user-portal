@@ -12,14 +12,18 @@ import { AuthGuard } from './guards/auth.guard';
 import { UserComponent } from './pages/user/user.component';
 import { BooksComponent } from './pages/books/books.component';
 import { CreateBookComponent } from './pages/create-book/create-book.component';
+import { AuthorsComponent } from './authors/authors.component';
 
 const routes: Routes = [
   
   { path:  'login', component:  LoginComponent},
-  { path : '', component: DashboardComponent, canActivate : [AuthGuard], children: [
+  //{ path : '', component: DashboardComponent, canActivate : [AuthGuard], children: [
 
-      { path: '', redirectTo: 'about', pathMatch: 'full' },
+    { path : '', component: DashboardComponent, canActivate : [AuthGuard], children: [
+
+      { path: '', redirectTo: 'user', pathMatch: 'full' },
       { path: 'about', component: AboutComponent },
+      { path: 'author', component: AuthorsComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'user', component: UserComponent },
       { path: 'book', component: BooksComponent },

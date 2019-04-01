@@ -4,6 +4,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import {  HttpClientModule} from '@angular/common/http';
+import { Ng4LoadingSpinnerModule} from 'ng4-loading-spinner';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import {NgxPaginationModule} from 'ngx-pagination'; 
+import { MatDatepickerModule,
+  MatNativeDateModule,
+  MatFormFieldModule,
+  MatInputModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +32,7 @@ import { BookDetailsComponent } from './pages/book-details/book-details.componen
 import { EditBookDetailsComponent } from './pages/edit-book-details/edit-book-details.component';
 import { CreateBookComponent } from './pages/create-book/create-book.component';
 import { AuthorsComponent } from './authors/authors.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -42,10 +50,18 @@ import { AuthorsComponent } from './authors/authors.component';
     BookDetailsComponent,
     EditBookDetailsComponent,
     CreateBookComponent,
-    AuthorsComponent
+    AuthorsComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
+  //  Ng4LoadingSpinnerModule.forRoot(),
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatInputModule,
+    NgxPaginationModule,
+    NgxSpinnerModule,
     AppRoutingModule,
     FormsModule, 
     ReactiveFormsModule,

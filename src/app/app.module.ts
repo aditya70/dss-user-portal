@@ -33,6 +33,8 @@ import { EditBookDetailsComponent } from './pages/edit-book-details/edit-book-de
 import { CreateBookComponent } from './pages/create-book/create-book.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { SelectService } from './services/select.service';
+import { CountryComponent } from './pages/country/country.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,8 @@ import { PaginationComponent } from './pagination/pagination.component';
     EditBookDetailsComponent,
     CreateBookComponent,
     AuthorsComponent,
-    PaginationComponent
+    PaginationComponent,
+    CountryComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +71,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     CommonModule,
     HttpClientModule
   ],
-  providers: [LoginService ,AuthGuard,UserService,TransfereService],
+  providers: [LoginService ,AuthGuard,UserService,TransfereService,SelectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

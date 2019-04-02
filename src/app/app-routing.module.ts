@@ -13,6 +13,7 @@ import { UserComponent } from './pages/user/user.component';
 import { BooksComponent } from './pages/books/books.component';
 import { CreateBookComponent } from './pages/create-book/create-book.component';
 import { AuthorsComponent } from './authors/authors.component';
+import { CountryComponent } from './pages/country/country.component';
 
 const routes: Routes = [
   
@@ -28,7 +29,8 @@ const routes: Routes = [
       { path: 'user', component: UserComponent },
       { path: 'book', component: BooksComponent },
       { path: 'book/:id', component: BookDetailsComponent },
-      { path: 'add-book', component: CreateBookComponent }
+      { path: 'add-book', component: CreateBookComponent },
+      { path: 'country', component: CountryComponent }
   ]
   },
   { path: '**', redirectTo: '' }

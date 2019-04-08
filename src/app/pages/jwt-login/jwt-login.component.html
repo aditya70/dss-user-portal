@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Sign In</h5>
+           <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)" novalidate>
+            <div class="form-group">
+              <input type="tel" id="inputEmail" class="form-control" formControlName="phone" placeholder="phone" required >
+              
+            </div>
+              <div *ngIf="loginForm.controls.phone.touched && loginForm.controls.phone.invalid" class="alert alert-danger">
+                Phone number is required
+              </div>
+             <div *ngIf="submitted && loginForm.controls.phone.errors">
+              <div *ngIf="loginForm.controls.phone.errors.required" class="alert alert-danger">Phone number is required</div>
+            </div>
+             <div class="form-group">
+              <input type="password" id="inputPassword" class="form-control" formControlName="password" placeholder="Password" required>
+          
+            </div>
+            <div *ngIf="loginForm.controls.password.touched && loginForm.controls.password.invalid" class="alert alert-danger">
+              password is required
+            </div>
+           <div *ngIf="submitted && loginForm.controls.password.errors">
+            <div *ngIf="loginForm.controls.password.errors.required" class="alert alert-danger">password is required</div>
+          </div>
+            
+            <div class="form-group">
+                <button  class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+            </div>
+          <!-- <div *ngIf="!credentials" class="alert alert-danger">
+          Phone number or password is incoorect
+          </div> -->
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <div>
+      <!--open image in new window-->
+        <!-- <a target="_blank" href="../../../assets/img/download.jpeg">Download Image</a> -->
+      <!-- <img src="../../../assets/img/download.jpeg" alt="Smiley face" height="400" width="400"> -->
+
+      <!--download image-->
+      <!-- <a download="download.jpeg" target="_blank" href="../../../assets/img/download.jpeg">
+        Click here to download image
+      </a> -->
+
+       <!--download excel file-->
+    
+      <a  download="book.xlsx" target="_blank" href="../../../assets/files/Book1.xlsx">
+        Click here to download excel file
+      </a>
+      <br>
+      <a  download="sample.json" target="_blank" href="../../../assets/files/info.json">
+        Click here to download json file
+      </a>
+      <br>
+      <a  download="sample.txt" target="_blank" href="../../../assets/files/helloworld.txt">
+        Click here to download text file
+      </a>
+
+      <br>
+      <br>
+      <button (click)="downloadFile()" class="btn btn-primary">Download Image</button>
+      <br>
+      <br>
+      <button (click)="openFile()" class="btn btn-primary">Open Image</button>
+      <br>
+      <br>
+      <button (click)="f1()" class="btn btn-primary">window open</button>
+    </div>
+

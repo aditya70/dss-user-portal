@@ -1,3 +1,4 @@
+import { JwtLoginComponent } from './pages/jwt-login/jwt-login.component';
 import { BookDetailsComponent } from './pages/book-details/book-details.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
@@ -30,7 +31,8 @@ const routes: Routes = [
       { path: 'book', component: BooksComponent },
       { path: 'book/:id', component: BookDetailsComponent },
       { path: 'add-book', component: CreateBookComponent },
-      { path: 'country', component: CountryComponent }
+      { path: 'country', component: CountryComponent },
+      { path: 'auth/login', component: JwtLoginComponent }
   ]
   },
   { path: '**', redirectTo: '' }

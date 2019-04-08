@@ -35,6 +35,10 @@ import { AuthorsComponent } from './authors/authors.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { SelectService } from './services/select.service';
 import { CountryComponent } from './pages/country/country.component';
+import { JwtLoginComponent } from './pages/jwt-login/jwt-login.component';
+import { JwtService } from './jwt.service';
+import { JwtModule } from '@auth0/angular-jwt';
+import { DataTableComponent } from './data-table/data-table.component';
 
 @NgModule({
   declarations: [
@@ -54,11 +58,21 @@ import { CountryComponent } from './pages/country/country.component';
     CreateBookComponent,
     AuthorsComponent,
     PaginationComponent,
-    CountryComponent
+    CountryComponent,
+    JwtLoginComponent,
+    DataTableComponent
   ],
   imports: [
     BrowserModule,
   //  Ng4LoadingSpinnerModule.forRoot(),
+  JwtModule.forRoot({
+    config: {
+      tokenGetter: function  tokenGetter() {
+           return     localStorage.getItem('access_token');},
+      whitelistedDomains: ['localhost:4200'],
+      blacklistedRoutes: ['http://localhost:4200/auth/login']
+    }
+  }),
     MatDatepickerModule,
     MatFormFieldModule,
     MatNativeDateModule,
@@ -71,7 +85,7 @@ import { CountryComponent } from './pages/country/country.component';
     CommonModule,
     HttpClientModule
   ],
-  providers: [LoginService ,AuthGuard,UserService,TransfereService,SelectService],
+  providers: [LoginService ,AuthGuard,UserService,TransfereService,SelectService,JwtService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

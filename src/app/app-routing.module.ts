@@ -15,6 +15,7 @@ import { BooksComponent } from './pages/books/books.component';
 import { CreateBookComponent } from './pages/create-book/create-book.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { CountryComponent } from './pages/country/country.component';
+import { DataTableComponent } from './data-table/data-table.component';
 
 const routes: Routes = [
   
@@ -32,7 +33,8 @@ const routes: Routes = [
       { path: 'book/:id', component: BookDetailsComponent },
       { path: 'add-book', component: CreateBookComponent },
       { path: 'country', component: CountryComponent },
-      { path: 'auth/login', component: JwtLoginComponent }
+      { path: 'auth/login', component: JwtLoginComponent },
+      { path: 'datatable', component: DataTableComponent }
   ]
   },
   { path: '**', redirectTo: '' }

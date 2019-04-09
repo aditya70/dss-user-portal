@@ -10,7 +10,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { MatDatepickerModule,
   MatNativeDateModule,
   MatFormFieldModule,
-  MatInputModule } from '@angular/material';
+  MatInputModule ,MatTableModule} from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,6 +39,8 @@ import { JwtLoginComponent } from './pages/jwt-login/jwt-login.component';
 import { JwtService } from './jwt.service';
 import { JwtModule } from '@auth0/angular-jwt';
 import { DataTableComponent } from './data-table/data-table.component';
+import {DataTablesModule} from 'angular-datatables';
+import { MatTableComponent } from './mat-table/mat-table.component';
 
 @NgModule({
   declarations: [
@@ -60,9 +62,11 @@ import { DataTableComponent } from './data-table/data-table.component';
     PaginationComponent,
     CountryComponent,
     JwtLoginComponent,
-    DataTableComponent
+    DataTableComponent,
+    MatTableComponent
   ],
   imports: [
+    DataTablesModule,
     BrowserModule,
   //  Ng4LoadingSpinnerModule.forRoot(),
   JwtModule.forRoot({
@@ -83,7 +87,8 @@ import { DataTableComponent } from './data-table/data-table.component';
     FormsModule, 
     ReactiveFormsModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule
   ],
   providers: [LoginService ,AuthGuard,UserService,TransfereService,SelectService,JwtService],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="row">
       <div class="col-md-6 mx-auto">
         <div class="md-form">
@@ -37,4 +37,36 @@
   
     </div>
   
-  </div>
+  </div> -->
+
+  <!-- <p>
+    data table works
+  </p> -->
+
+
+
+  <!-- <h2>Angular 7 datatable - UserList</h2> -->
+  <h2> UserList</h2> 
+<!-- <table datatable [dtOptions]="dtOptions" class="row-border hover"></table> -->
+<div>
+  <button class="btn btn-primary" (click)="download()">Export As Pdf</button>
+</div>
+<br>
+<br>
+
+<table datatable [dtOptions]="dtOptions"  class="row-border hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>First name</th>
+      <th>Last name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of dtUsers">
+      <td>{{ person.id }}</td>
+      <td>{{ person.firstName }}</td>
+      <td>{{ person.lastName }}</td>
+    </tr>
+  </tbody>
+  </table>

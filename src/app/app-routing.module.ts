@@ -1,3 +1,4 @@
+import { MatTableComponent } from './mat-table/mat-table.component';
 import { JwtLoginComponent } from './pages/jwt-login/jwt-login.component';
 import { BookDetailsComponent } from './pages/book-details/book-details.component';
 import { ContactComponent } from './contact/contact.component';
@@ -34,7 +35,8 @@ const routes: Routes = [
       { path: 'add-book', component: CreateBookComponent },
       { path: 'country', component: CountryComponent },
       { path: 'auth/login', component: JwtLoginComponent },
-      { path: 'datatable', component: DataTableComponent }
+      { path: 'datatable', component: DataTableComponent },
+      { path: 'mattable', component: MatTableComponent }
   ]
   },
   { path: '**', redirectTo: '' }

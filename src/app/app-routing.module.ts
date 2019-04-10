@@ -17,6 +17,7 @@ import { CreateBookComponent } from './pages/create-book/create-book.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { CountryComponent } from './pages/country/country.component';
 import { DataTableComponent } from './data-table/data-table.component';
+import { MaterialDemoComponent } from './pages/material-page/material-demo/material-demo.component';
 
 const routes: Routes = [
   
@@ -36,7 +37,8 @@ const routes: Routes = [
       { path: 'country', component: CountryComponent },
       { path: 'auth/login', component: JwtLoginComponent },
       { path: 'datatable', component: DataTableComponent },
-      { path: 'mattable', component: MatTableComponent }
+      { path: 'mattable', component: MatTableComponent },
+      { path: 'material', component: MaterialDemoComponent }
   ]
   },
   { path: '**', redirectTo: '' }

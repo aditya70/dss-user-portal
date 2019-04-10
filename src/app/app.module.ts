@@ -1,5 +1,6 @@
 import { TransfereService } from './services/transfere.service';
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -41,6 +42,11 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { DataTableComponent } from './data-table/data-table.component';
 import {DataTablesModule} from 'angular-datatables';
 import { MatTableComponent } from './mat-table/mat-table.component';
+import { MaterialDemoComponent } from './pages/material-page/material-demo/material-demo.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -63,7 +69,8 @@ import { MatTableComponent } from './mat-table/mat-table.component';
     CountryComponent,
     JwtLoginComponent,
     DataTableComponent,
-    MatTableComponent
+    MatTableComponent,
+    MaterialDemoComponent
   ],
   imports: [
     DataTablesModule,
@@ -88,7 +95,12 @@ import { MatTableComponent } from './mat-table/mat-table.component';
     ReactiveFormsModule,
     CommonModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatCheckboxModule,
+    BrowserAnimationsModule,
+    MatRadioModule,
+    MatSliderModule,
+    MatCardModule
   ],
   providers: [LoginService ,AuthGuard,UserService,TransfereService,SelectService,JwtService],
   bootstrap: [AppComponent]
